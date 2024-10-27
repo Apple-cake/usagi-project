@@ -1,15 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import MamazonIcon from '../icons/IconMamazon.vue'
+import AppLogoIcon from '../icons/IconAppLogo.vue'
+</script>
 
 <template>
-  <header style="line-height: 60px;">
-    <h2 class="mx-4 font-bold">Usagi Project</h2>
+  <header class="flex" style="line-height: 60px;">
+    <AppLogoIcon class="mx-4 self-center"/>
+    <h2 class="font-bold">Usagi Project</h2>
   </header>
   <div class="m-4">
     <div class="text-xs">さまざまなWebサイトのデザインを勉強するためのサイト</div>
     <div class="pt-4">
-      <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded">
-        <RouterLink to="/mamazon">Mamazon</RouterLink>
-      </button>
+      <RouterLink to="/mamazon"><MamazonIcon/></RouterLink>
     </div>
   </div>
     <!-- <h1 class="text-3xl font-bold underline">
