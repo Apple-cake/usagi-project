@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import Header from '../mamazon/Header.vue';
+import Header from '../templates/mamazon/Header.vue';
 </script>
 
 <template>

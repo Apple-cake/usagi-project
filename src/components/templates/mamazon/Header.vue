@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MamazonIcon from '../icons/IconMamazon.vue'
+import MamazonIcon from '../../icons/IconMamazon.vue'
 </script>
 
 <template>

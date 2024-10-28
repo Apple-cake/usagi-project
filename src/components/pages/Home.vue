@@ -1,30 +1,129 @@
 <script setup lang="ts">
-import MamazonIcon from '../icons/IconMamazon.vue'
-import AppLogoIcon from '../icons/IconAppLogo.vue'
+import Header from '../templates/home/Header.vue';
 </script>
 
-<template>
-  <header class="flex" style="line-height: 60px;">
-    <AppLogoIcon class="mx-4 self-center"/>
-    <h2 class="font-bold">Usagi Project</h2>
-  </header>
-  <div class="m-4">
-    <div class="text-xs">さまざまなWebサイトのデザインを勉強するためのサイト</div>
-    <div class="pt-4">
-      <RouterLink to="/mamazon"><MamazonIcon/></RouterLink>
+<template id="home-page">
+  <Header/>
+  <div class="gallery">
+    <div class="gallery-list py-5 mx-auto relative">
+      <ul class="gallery-list-cover grid">
+        <li>
+          <div class="gallery-list-card">
+            <RouterLink class="gallery-list-card__link" to="/mamazon">
+              <img class="gallery-list-card__link__image" src="../../capture/mamazon.png">
+            </RouterLink>
+          </div>
+        </li>
+        <li>
+          <div class="gallery-list-card">
+            <a class="gallery-list-card__link" href="https://recruit.g-f.co.jp/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../capture/241012-640x480.jpg">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="gallery-list-card">
+            <a class="gallery-list-card__link" href="https://wms.or.jp/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../capture/240917-640x480.jpg">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="gallery-list-card">
+            <a class="gallery-list-card__link" href="https://cybozu.co.jp/sodelab/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../capture/240823-640x480.jpg">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="gallery-list-card">
+            <a class="gallery-list-card__link" href="https://www.shukatsu-career.co.jp/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../capture/240410-640x480.jpg">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="gallery-list-card">
+            <a class="gallery-list-card__link" href="https://shichi-hachi.theday-inc.jp/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../capture/240215-640x480.jpg">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="gallery-list-card">
+            <a class="gallery-list-card__link" href="https://www.yamajitsu.co.jp/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../capture/240119-640x480.jpg">
+            </a>
+          </div>
+        </li>
+        <li>
+          <div class="gallery-list-card">
+            <a class="gallery-list-card__link" href="https://isaka.co.jp/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../capture/231117-640x480.jpg">
+            </a>
+          </div>
+        </li>
+      </ul>
     </div>
   </div>
-    <!-- <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1> -->
-  <!-- <nav>
-    <RouterLink to="/">Home</RouterLink>
-    <RouterLink to="/about">About</RouterLink>
-  </nav> -->
 </template>
 
 <style scoped>
-header {
-  border-bottom: solid 1px #CCC;
+.gallery {
+  min-height: calc(100vh - 60px);
+  background-color: #f4f7f6;
+}
+.gallery-list-card {
+  position: relative;
+  &:hover {
+    .gallery-list-card__link::before {
+      display: block;
+    }
+  }
+  .gallery-list-card__link::before {
+    background-color: #22222273;
+    border-radius: 8px;
+    content: "";
+    display: none;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .gallery-list-card__link__image {
+    border-radius: 8px;
+  }
+}
+@media screen and (min-width: 1367px) {
+  .gallery-list {
+    width: 95vw;
+  }
+  .gallery-list-cover {
+    column-gap: 34px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 40px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+  .gallery-list {
+    width: 95vw;
+  }
+  .gallery-list-cover {
+    column-gap: 34px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .gallery-list {
+    width: 92vw;
+  }
+  .gallery-list-cover {
+    column-gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 28px;
+  }
 }
 </style>
