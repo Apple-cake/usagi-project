@@ -22,7 +22,7 @@ header {
     }
   }
 }
-@media screen and (min-width: 1367px) {
+@media screen and (min-width: 961px) {
   header {
     position: sticky;
     top: 0;
@@ -32,12 +32,12 @@ header {
     width: 95vw;
   }
 }
-@media screen and (min-width: 769px) and (max-width: 1366px) {
+@media screen and (min-width: 768px) and (max-width: 960px) {
   .header-body {
     width: 95vw;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .header-body {
     width: 92vw;
   }

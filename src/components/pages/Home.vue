@@ -75,11 +75,6 @@ import Header from '../templates/home/Header.vue';
 }
 .gallery-list-card {
   position: relative;
-  &:hover {
-    .gallery-list-card__link::before {
-      display: block;
-    }
-  }
   .gallery-list-card__link::before {
     background-color: #22222273;
     border-radius: 8px;
@@ -96,7 +91,7 @@ import Header from '../templates/home/Header.vue';
     border-radius: 8px;
   }
 }
-@media screen and (min-width: 1367px) {
+@media screen and (min-width: 1281px) {
   .gallery-list {
     width: 95vw;
   }
@@ -105,8 +100,13 @@ import Header from '../templates/home/Header.vue';
     grid-template-columns: repeat(4, 1fr);
     row-gap: 40px;
   }
+  .gallery-list-card:hover {
+    .gallery-list-card__link::before {
+      display: block;
+    }
+  }
 }
-@media screen and (min-width: 769px) and (max-width: 1366px) {
+@media screen and (min-width: 961px) and (max-width: 1280px) {
   .gallery-list {
     width: 95vw;
   }
@@ -115,8 +115,23 @@ import Header from '../templates/home/Header.vue';
     grid-template-columns: repeat(3, 1fr);
     row-gap: 40px;
   }
+  .gallery-list-card:hover {
+    .gallery-list-card__link::before {
+      display: block;
+    }
+  }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 960px) {
+  .gallery-list {
+    width: 95vw;
+  }
+  .gallery-list-cover {
+    column-gap: 34px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
   .gallery-list {
     width: 92vw;
   }
