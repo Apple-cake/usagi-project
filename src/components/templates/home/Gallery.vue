@@ -100,6 +100,9 @@
 }
 .gallery-list-card {
   position: relative;
+  animation-duration: 1s;
+  animation-name: fadein;
+  animation-timing-function: ease-out;
   .gallery-list-card__link::before {
     background-color: #22222277;
     border-radius: 8px;
@@ -178,6 +181,16 @@
     column-gap: 16px;
     grid-template-columns: repeat(1, 1fr);
     row-gap: 28px;
+  }
+}
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
