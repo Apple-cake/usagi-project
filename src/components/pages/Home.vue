@@ -101,6 +101,8 @@ import Header from '../templates/home/Header.vue';
     row-gap: 40px;
   }
   .gallery-list-card:hover {
+    scale: 1.02;
+    transition: scale .3s ease-in-out;
     .gallery-list-card__link::before {
       display: block;
     }
@@ -116,6 +118,8 @@ import Header from '../templates/home/Header.vue';
     row-gap: 40px;
   }
   .gallery-list-card:hover {
+    scale: 1.02;
+    transition: scale .3s ease-in-out;
     .gallery-list-card__link::before {
       display: block;
     }
