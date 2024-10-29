@@ -4,9 +4,9 @@ import MamazonIcon from '../../icons/IconMamazon.vue'
 
 <template>
   <header>
-    <div class="first-header" style="line-height: 60px;">
-
+    <div class="first-header flex justify-between" style="line-height: 60px;">
       <MamazonIcon/>
+      <RouterLink class="mx-4" to="/">Home</RouterLink>
     </div>
     <div class="second-header" style="line-height: 39px;">
       <h2 class="mx-4 font-bold">Mamazonポイント：1214</h2>
