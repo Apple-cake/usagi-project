@@ -10,56 +10,56 @@ import Header from '../templates/home/Header.vue';
         <li>
           <div class="gallery-list-card">
             <RouterLink class="gallery-list-card__link" to="/mamazon">
-              <img class="gallery-list-card__link__image" src="../../capture/mamazon.png">
+              <img class="gallery-list-card__link__image" src="../../captures/mamazon.png">
             </RouterLink>
           </div>
         </li>
         <li>
           <div class="gallery-list-card">
             <a class="gallery-list-card__link" href="https://recruit.g-f.co.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../capture/241012-640x480.jpg">
+              <img class="gallery-list-card__link__image" src="../../captures/241012-640x480.jpg">
             </a>
           </div>
         </li>
         <li>
           <div class="gallery-list-card">
             <a class="gallery-list-card__link" href="https://wms.or.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../capture/240917-640x480.jpg">
+              <img class="gallery-list-card__link__image" src="../../captures/240917-640x480.jpg">
             </a>
           </div>
         </li>
         <li>
           <div class="gallery-list-card">
             <a class="gallery-list-card__link" href="https://cybozu.co.jp/sodelab/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../capture/240823-640x480.jpg">
+              <img class="gallery-list-card__link__image" src="../../captures/240823-640x480.jpg">
             </a>
           </div>
         </li>
         <li>
           <div class="gallery-list-card">
             <a class="gallery-list-card__link" href="https://www.shukatsu-career.co.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../capture/240410-640x480.jpg">
+              <img class="gallery-list-card__link__image" src="../../captures/240410-640x480.jpg">
             </a>
           </div>
         </li>
         <li>
           <div class="gallery-list-card">
             <a class="gallery-list-card__link" href="https://shichi-hachi.theday-inc.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../capture/240215-640x480.jpg">
+              <img class="gallery-list-card__link__image" src="../../captures/240215-640x480.jpg">
             </a>
           </div>
         </li>
         <li>
           <div class="gallery-list-card">
             <a class="gallery-list-card__link" href="https://www.yamajitsu.co.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../capture/240119-640x480.jpg">
+              <img class="gallery-list-card__link__image" src="../../captures/240119-640x480.jpg">
             </a>
           </div>
         </li>
         <li>
           <div class="gallery-list-card">
             <a class="gallery-list-card__link" href="https://isaka.co.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../capture/231117-640x480.jpg">
+              <img class="gallery-list-card__link__image" src="../../captures/231117-640x480.jpg">
             </a>
           </div>
         </li>
@@ -76,7 +76,7 @@ import Header from '../templates/home/Header.vue';
 .gallery-list-card {
   position: relative;
   .gallery-list-card__link::before {
-    background-color: #22222273;
+    background-color: #22222277;
     border-radius: 8px;
     content: "";
     display: none;
@@ -91,7 +91,7 @@ import Header from '../templates/home/Header.vue';
     border-radius: 8px;
   }
 }
-@media screen and (min-width: 1281px) {
+@media screen and (min-width: 1201px) {
   .gallery-list {
     width: 95vw;
   }
@@ -107,8 +107,13 @@ import Header from '../templates/home/Header.vue';
       display: block;
     }
   }
+  .gallery-list-card:active {
+    .gallery-list-card__link::before {
+      background-color: #222222aa;
+    }
+  }
 }
-@media screen and (min-width: 961px) and (max-width: 1280px) {
+@media screen and (min-width: 961px) and (max-width: 1200px) {
   .gallery-list {
     width: 95vw;
   }
@@ -122,6 +127,11 @@ import Header from '../templates/home/Header.vue';
     transition: scale .3s ease-in-out;
     .gallery-list-card__link::before {
       display: block;
+    }
+  }
+  .gallery-list-card:active {
+    .gallery-list-card__link::before {
+      background-color: #222222aa;
     }
   }
 }
