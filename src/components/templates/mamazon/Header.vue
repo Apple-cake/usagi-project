@@ -16,6 +16,7 @@ import MamazonIcon from '../../icons/IconMamazon.vue'
 
 <style scoped>
 header {
+  min-width: 1000px;
   > .first-header {
     height: 60px;
     color: #FFFFFF;
