@@ -1,9 +1,18 @@
 <script setup lang="ts">
-import MamazonIcon from '../../icons/IconMamazon.vue'
+import { computed } from 'vue';
+import { isSmartPhone } from '@/utils/deviceUtils';
+import MamazonIcon from '@/components/icons/IconMamazon.vue'
+
+/* headerのスタイルを計算 */
+const headerStyle = computed(() => {
+  return {
+    minWidth: isSmartPhone() ? 'auto' : '1000px',
+  };
+});
 </script>
 
 <template>
-  <header>
+  <header :style="headerStyle">
     <div class="first-header flex justify-between" style="line-height: 60px;">
       <MamazonIcon/>
       <RouterLink class="mx-4" to="/">Home</RouterLink>
@@ -16,7 +25,6 @@ import MamazonIcon from '../../icons/IconMamazon.vue'
 
 <style scoped>
 header {
-  min-width: 1000px;
   > .first-header {
     height: 60px;
     color: #FFFFFF;

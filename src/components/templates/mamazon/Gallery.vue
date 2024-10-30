@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { isSmartPhone } from '@/utils/deviceUtils';
+</script>
 
 <template>
-  <div class="gallery">
+  <div v-if="!isSmartPhone()" class="gallery">
     <div class="gallery-list py-5 mx-auto relative">
       <div id="gallery-list-cover" class="gallery-list-cover grid">
         <div class="gallery-list-card">
@@ -25,6 +27,25 @@
       </div>
     </div>
   </div>
+  <div v-if="isSmartPhone()" class="smartphone-gallery">
+    <div class="pb-2">
+      <div class="smartphone-card pt-2">
+      <div class="smartphone-card-ui">
+        <h2 class="smartphone-card-ui-header font-bold px-4 mb-2.5">お客様が閲覧した商品に関連する商品</h2>
+      </div>
+    </div>
+    <div class="smartphone-card pt-2">
+      <div class="smartphone-card-ui">
+        <h2 class="smartphone-card-ui-header font-bold px-4 mb-2.5">スマートワークストア</h2>
+      </div>
+    </div>
+    <div class="smartphone-card pt-2">
+      <div class="smartphone-card-ui">
+        <h2 class="smartphone-card-ui-header font-bold px-4 mb-2.5">秋のボディメイク特集</h2>
+      </div>
+    </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>
@@ -35,6 +56,21 @@
   min-height: calc(100vh - 99px);
   min-width: 1000px;
   background-color: #e3e6e6;
+}
+.smartphone-gallery {
+  min-height: calc(100vh - 99px);
+  background-color: #e3e6e6;
+}
+.smartphone-card {
+  height: 300px;
+}
+.smartphone-card-ui {
+  background-color: #ffffff;
+  height: 100%;
+  > .smartphone-card-ui-header {
+    color: #0f1111;
+    font-size: 17px;
+  }
 }
 @media screen and (min-width: 1240px) {
   .gallery-list {
@@ -56,6 +92,7 @@
     height: 100%;
     padding-top: 20px;
     > .a-card-ui-header {
+      color: #0f1111;
       font-size: 17px;
     }
   }
@@ -81,6 +118,7 @@
     height: 100%;
     padding-top: 20px;
     > .a-card-ui-header {
+      color: #0f1111;
       font-size: 17px;
     }
   }
