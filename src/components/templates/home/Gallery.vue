@@ -34,16 +34,16 @@ const getStyle = (className: string): { [key: string]: string } => {
       <ul id="gallery-list-cover" class="gallery-list-cover grid">
         <li :class="getClass(0)" :style="getStyle(getClass(0))">
           <div class="gallery-list-card">
-            <RouterLink class="gallery-list-card__link" to="/mamazon">
+            <RouterLink class="gallery-list-card__link" to="/mamazon" target="_blank">
               <img class="gallery-list-card__link__image" src="../../../captures/mamazon.png">
             </RouterLink>
           </div>
         </li>
         <li :class="getClass(1)" :style="getStyle(getClass(1))">
           <div class="gallery-list-card">
-            <a class="gallery-list-card__link" href="https://recruit.g-f.co.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../../captures/241012-640x480.jpg">
-            </a>
+            <RouterLink class="gallery-list-card__link" to="/yamajitu" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../../captures/240119-640x480.jpg">
+            </RouterLink>
           </div>
         </li>
         <li :class="getClass(2)" :style="getStyle(getClass(2))">
@@ -76,8 +76,8 @@ const getStyle = (className: string): { [key: string]: string } => {
         </li>
         <li :class="getClass(6)" :style="getStyle(getClass(6))">
           <div class="gallery-list-card">
-            <a class="gallery-list-card__link" href="https://www.yamajitsu.co.jp/" target="_blank">
-              <img class="gallery-list-card__link__image" src="../../../captures/240119-640x480.jpg">
+            <a class="gallery-list-card__link" href="https://recruit.g-f.co.jp/" target="_blank">
+              <img class="gallery-list-card__link__image" src="../../../captures/241012-640x480.jpg">
             </a>
           </div>
         </li>
